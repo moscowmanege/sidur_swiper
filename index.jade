@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		title S I D U R | S W I P E R
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		link(rel='stylesheet', type='text/css', href='css/swiper.min.css')
+		link(rel='stylesheet', type='text/css', href='css/main.css')
+		script(type='text/javascript', src='js/jquery-2.2.4.min.js')
+		script(type='text/javascript', src='js/swiper.jquery.min.js')
+		script(type='text/javascript', src='js/main.js')
+	body
+		.swiper-container.swiper-container-h: .swiper-wrapper
+			- var i = 1
+			- var count = 4
+			- var pref = ''
+			- var ext = 'jpg'
+			while i < (count + 1)
+				.swiper-slide
+					.swiper-container.swiper-container-v: .swiper-wrapper
+						.swiper-slide(style='background-image: url(img/rus/' + pref + i + '.' + ext + ')')
+						.swiper-slide(style='background-image: url(img/eng/' + pref + i + '.' + ext + ')')
+				- i = i + 1
+
+		.swiper-button.up
+		.swiper-button.down
+		.swiper-button.left
+		.swiper-button.right
